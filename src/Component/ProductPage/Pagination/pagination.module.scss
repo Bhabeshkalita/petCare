@@ -1,0 +1,14 @@
+.pagination{
+    display: flex;
+    justify-content: space-evenly;
+    &_page{
+        color: rgb(133, 130, 127);
+    }
+    @media only screen and (max-width:600px){
+        flex-direction: column;
+        text-align: center;
+        &_page{
+            margin-bottom: 1rem;
+        }  
+    }
+}

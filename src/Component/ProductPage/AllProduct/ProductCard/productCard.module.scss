@@ -1,0 +1,78 @@
+.card{
+    padding: 0.5rem ;
+    border: none;
+    width:95%;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow:1px 1px 18px 0px rgba(168, 166, 166, 0.75);
+    cursor: pointer;
+    &_image{
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        text-align: center;
+        & img{
+            width: 80%;
+        }
+    }
+    &_content{
+        margin-top: 1rem;
+        padding: 0 0.5rem 0.5rem;
+        &_h4{
+            font-size: 1.1rem;
+            color: rgb(61, 59, 59);
+            margin: 1rem 0;
+        }
+        &_p1{
+            margin:0 0 0.5rem  ;
+            &_span1{
+                background-color: green;
+                color: white;
+                border-radius: 5px;
+                padding: 0.2rem 0.7rem;
+            }
+            &_span2{
+                margin-left: 1rem ;
+                color: rgb(165, 164, 164);
+            }
+        }
+        &_p2{
+            font-weight: 700;
+            color: black;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        &_p3{
+            font-size: 1.05rem;
+            color: rgb(97, 97, 96);
+        }
+
+    }
+    @media only screen and (max-width:768px){
+        &_content{
+            margin-top: 0.5rem;
+            &_h4{
+                font-size: 1em;
+                margin: 0.5rem 0;
+            }
+            &_p1{
+                &_span1{
+                    border-radius: 3px;
+                    padding: 0rem 0.5rem;
+                }
+                &_span2{
+                    margin-left: 0.5rem ;
+                }
+            }
+            &_p2{
+                font-weight: 700;
+                font-size: 1rem;
+                margin-bottom: 0.3rem;
+            }
+            &_p3{
+                font-size: 1rem;
+            }
+    
+        }
+    }
+}

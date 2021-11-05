@@ -1,0 +1,44 @@
+.navbar_content_search{
+    width: 60%;
+    margin:2rem auto;
+    &_container{
+        width: 100%;
+        position: relative;
+        & input{
+            border-radius: 5px;
+            width: 100%;
+            border: 1px solid #71717298;
+            font-size: 0.9rem;
+            padding: 0.55rem 0.8rem;
+            background-color: #f0f0f3;
+            color: #444445;
+            &:focus{
+                outline: none;
+            }
+        }
+        & button{
+            position: absolute;
+            border: none;
+            background: none;
+            top: 50%;
+            right: 0%;
+            transform: translate(-15% , -50%);
+            cursor: pointer;
+            border-radius: 50px;
+            width: 27px;
+            height: 27px;
+            transition: ease 0.3s;
+            & i{
+                color: rgb(0, 0, 0);
+            }
+            &:hover{
+                background-color: #c7c0c0;
+                transition: ease 0.3s;
+                & i{
+                    color: rgb(87, 86, 85);
+                    transition: ease 0.35s;
+                }
+            }
+        }
+    }
+}

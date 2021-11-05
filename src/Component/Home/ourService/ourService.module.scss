@@ -1,0 +1,62 @@
+.ourservice{
+    width: 90%;
+    padding: 2rem;
+    margin: 3.5rem auto;
+    
+    &_title{
+        margin-bottom: 3.5rem;
+        & p{
+            color: rgb(143, 142, 141);
+            text-transform: uppercase;
+            font-size: 1.05rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        & h3{
+            // width: 40%;
+            font-size: 2.2rem;
+            font-weight: 700;
+            // letter-spacing: 0.5px;
+            color: #080479;
+            & span{
+                display: block;
+                text-transform: capitalize;
+            }
+        }
+    }
+    &_card{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    @media only screen and(max-width:1024px) {
+        width: 94%;
+        padding: 1rem;
+    }
+    @media only screen and(max-width:770px) {
+        &_title{
+            margin-bottom: 2.5rem;
+            & p{
+                font-size: 1rem;
+                margin-bottom: 0.4rem;
+            }
+            & h3{
+                font-size: 2rem;                
+            }
+        }
+    }
+    @media only screen and(max-width:600px) {
+        margin: 2.5rem auto;
+        &_title{
+            & p{
+                font-size: 0.95rem;
+            }
+            & h3{
+                font-size: 1.8rem;                
+            }
+        }
+        &_card{
+            flex-direction: column;
+        }
+    }
+}

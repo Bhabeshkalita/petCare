@@ -1,0 +1,186 @@
+.signup{   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    transition: ease 0.5s;
+    z-index: 10000;
+    animation: hide 0.7s ;
+    &_image{
+        width: 48%;
+        transition: ease 0.5s;
+        & img{
+            width: 100%;
+        }
+    }
+    &_form{
+        width: 50%;
+        padding: 1rem 1.6rem;
+        border-left:1px solid rgb(177, 173, 173) ;
+        &_close{
+            text-align: end;
+            color: rgb(114, 111, 111);
+            font-size: 0.95rem;
+            cursor: pointer;
+        }
+        &_input{
+            & h4{
+                font-size: 1.2rem;
+                font-family: 500;
+                color: rgb(110, 106, 106);
+                margin-bottom: 1.3rem;
+            }
+            &_flex{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                &_width{
+                    width: 48%;
+                }
+            }
+            &_item{
+                position: relative;
+                margin-bottom: 1.3rem;
+                &_input{
+                    background: none;
+                    background-color: white;
+                    color: grey;
+                    font-size: 16px;
+                    padding: 0.5rem 1.8rem;
+                    width: 100%;       
+                    border: 2px solid rgb(100, 96, 96);
+                    border-radius: 7px;
+                    &:focus{
+                        outline: none;
+                    }
+                }
+                &_label{
+                    padding: 0rem 0.6rem;
+                    color: rgb(78, 78, 78);
+                    font-size: 13px;
+                    font-weight: normal;
+                    letter-spacing: 1px;
+                    position: absolute;
+                    pointer-events: none;
+                    background-color: white;
+                    left: 7px;
+                    top: -10px;
+                    transition: 300ms ease all;
+                }
+            }            
+            &_or{
+                text-align: center;
+                font-size: 0.9rem;
+                color: rgb(158, 156, 156);
+                margin-bottom: 0.5rem;
+            }
+            &_social{
+                width: 35%;
+                // background-color: red;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin: auto;
+                margin-bottom: 1.3rem;
+                & a{
+                    width: 40%;
+                    & img{
+                        width: 90%;
+                    }
+                }
+            }
+            &_loginButton{
+                text-align: center;
+                & button{
+                    width: 60%;
+                    padding: 0.6rem 2.5rem ;
+                    color: white;
+                    background-color: #0b06a4;
+                    font-size: 1rem;
+                    border-radius: 10px;
+                    font-weight: bolder;
+                    border: none;
+                    margin-bottom: 1rem;
+                    cursor: pointer;
+                }
+            }
+            &_createAccount{
+                text-align: center;
+                & p{
+                    color: grey;
+                    font-size: 0.9rem;
+                    & a{
+                        text-decoration: none;
+                        color: red;
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and(max-width:770px) {
+        &_image{
+            width: 49%; 
+        }
+        &_form{
+            width: 50%;
+        }
+    }
+    @media only screen and(max-width:600px) {
+        // width: 90%;
+        flex-direction: column;
+        // background-color: red;
+        &_image{
+            width: 50%;
+            
+            margin: auto; 
+        }
+        &_form{
+            width: 90%;
+            padding:0.2rem;
+            border-left:none ;
+            &_input{
+                & h4{
+                    margin-bottom: 1rem;
+                }
+                &_item{
+                    margin-bottom: 1rem;
+                    &_input{                        
+                        font-size: 12.5px;
+                    }  
+                }
+                &_or{   
+                    margin-bottom: 0.7rem;
+                }
+                &_social{                    
+                    margin-bottom: 1rem;
+                    & a{
+                        width: 40%;
+                    }
+                }
+                &_loginButton{
+                    & button{
+                        padding: 0.5rem 2.5rem ;                        
+                        font-size: 0.85rem;
+                        margin-bottom: 1rem;
+                    }
+                }
+               
+            }
+        }
+    }
+}
+
+@keyframes hide {
+    0%{
+        // transform: scale(1) translate(-50% , -50%);
+        opacity: 0;
+    }
+    50% {
+        // transform: scale(0.96) translate(-50% , -60%);
+        opacity: 0;
+      }
+    100% {
+    // transform: scale(1) translate(-50% , -50%);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,99 @@
+.card{
+    // background-color: red;
+    width: 28%;
+    padding: 2.3rem 1.5rem;
+    border: 2px solid rgb(119, 59, 214);
+    border-radius: 20px;
+    transition: ease 0.4s;
+    box-shadow: 10px 15px 25px 3px #dbdada;
+    -webkit-box-shadow: 10px 15px 25px 3px #dbdada;
+    -moz-box-shadow: 10px 15px 25px 3px #dbdada;
+    cursor: pointer;
+    
+    &_image{
+        width: 28%;
+        object-position: center;
+        object-fit: cover;
+        background-color: white;
+        text-align: center;
+        border: 2px solid rgb(119, 59, 214);
+        border-radius: 15px;
+        & img{  
+            width: 70%;            
+        }
+    }
+    &_content{
+        margin-top: 2.2rem;
+        & h4{
+            color: #080479;
+            margin-bottom: 1.2rem;
+            font-size: 1.3rem;
+            // text-align: center;
+            // left: 50%;
+            // transform: translate(5% , 50px);
+            transition: ease 0.4s;   
+            // font-weight: 900;
+        }
+        & p{
+            color: #080479;
+            font-size: 0.9rem;
+            // transition: ease 0.4s;      
+            // opacity: 0;      
+        }
+    }
+    &:hover{
+        background-color: #694ec5;
+        transition: ease 0.4s;
+        // padding: 2.3rem 1.5rem ;
+        transform: translate(0 , -10px);    
+        
+    }
+    &:hover > &_content{        
+        & h4{
+            color: white;
+            font-weight: 900;
+            // text-align: start;
+            // transform: translate(0 , 0);   
+            transition: ease 0.4s;
+            
+        }
+        & p{
+            color: white;
+            // opacity: 1;
+            transition: ease 0.4s;
+            
+        }
+    }
+    @media only screen and(max-width:1024px) {
+        padding: 1.5rem;
+        width: 30%;
+        &_image{
+            width: 34%;
+        }
+        &_content{
+            margin-top: 1.5rem;
+            & h4{
+                margin-bottom: 0.8rem;
+                font-size: 1.2rem;
+            }
+        }
+    }
+    @media only screen and(max-width:770px) {
+        padding: 1.2rem;
+        width: 31%;
+        &_image{
+            width: 40%;
+        }
+        &_content{
+            margin-top: 1.2rem;
+            & h4{
+                margin-bottom: 0.6rem;
+                font-size: 1.1rem;
+            }
+        }
+    }
+    @media only screen and(max-width:600px) {
+        width: 90%;
+        margin:1rem auto;
+    }
+}

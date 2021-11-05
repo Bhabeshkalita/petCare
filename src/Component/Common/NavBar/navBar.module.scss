@@ -1,0 +1,192 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    padding:0.5rem 2rem;
+    align-items: center;
+    margin: auto;
+    &_logo{
+        width: 25%;
+        & h3{
+            color: rgb(126, 125, 125);
+        }
+    }
+    &_content{
+        width: 73%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+        align-items: center;
+        padding:0.5rem 0rem;
+        &_search{
+            width: 15%;
+            &_container{
+                width: 100%;
+                position: relative;
+                & input{
+                    border-radius: 20px;
+                    width: 100%;
+                    border: none;
+                    font-size: 0.9rem;
+                    padding: 0.55rem 0.8rem;
+                    background-color: #ebebf0;
+                    color: #444445;
+                    &:focus{
+                        outline: none;
+                    }
+                }
+                & button{
+                    position: absolute;
+                    border: none;
+                    background: none;
+                    top: 50%;
+                    right: 0%;
+                    transform: translate(-15% , -50%);
+                    cursor: pointer;
+                    border-radius: 50px;
+                    width: 27px;
+                    height: 27px;
+                    transition: ease 0.3s;
+                    & i{
+                        color: rgb(148, 146, 144);
+                    }
+                    &:hover{
+                        background-color: #c7c0c0;
+                        transition: ease 0.3s;
+                        & i{
+                            color: rgb(87, 86, 85);
+                            transition: ease 0.35s;
+                        }
+                    }
+                }
+            }
+        }
+        &_link{
+            & a {
+                text-decoration: none;
+                color: #0B06A4;
+                font-size: 1rem;
+                margin-bottom: 0.5rem;
+                font-weight: 700;
+                letter-spacing: 0.4px;
+                &:not(:last-child){
+                    margin-right:2.5rem;
+                }                
+            }
+            &_active{
+                font-weight: bolder;
+                font-size: 1.2rem;
+                position: relative;
+                padding: 0 0 0.8rem 0;                
+                &::after{
+                    content: ' ';
+                    background-color: #ed5609bf;
+                    position: absolute;
+                    width: 11px;
+                    height: 11px;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translate(-50% ,0);
+                    border-radius: 50%;
+                }
+            }
+        }
+        &_loginButton{
+            width: 12%;
+            & button{
+                width: 100%;
+                background-color:#0B06A4 ;
+                color: white;
+                border-radius: 11px;
+                padding: 0.6rem 0rem;
+                font-size: 1rem;
+                font-weight: bold;
+                border: none;
+                cursor: pointer;
+                letter-spacing: 0.5px;
+                box-shadow: 0px 3px 11px -1px rgba(0,0,0,0.62);
+                -webkit-box-shadow: 0px 3px 11px -1px rgba(0,0,0,0.62);
+                -moz-box-shadow: 0px 3px 11px -1px rgba(0,0,0,0.62);
+            }
+        }
+        &_cartImage{
+            width: 4%;
+            & img{
+                width: 100%;
+                vertical-align: middle;
+            }
+        }
+    }
+    @media only screen and(max-width:1024px) {
+        width: 94%;
+        padding:0.5rem 1rem;
+        &_logo{
+            width: 22%;
+        }
+        &_content{
+            width: 77%;
+            &_search{
+                width: 19%;
+            }
+            &_link{
+                & a {
+                    font-size: 0.9rem;
+                    letter-spacing: 0.2px;
+                    &:not(:last-child){
+                        margin-right:1.3rem;
+                    }
+                }
+                &_active{
+                    font-size: 1.08rem;
+                    padding: 0 0 0.65rem 0;
+                    &::after{
+                        width: 8px;
+                        height: 8px;
+                    }
+                }
+            }
+            &_loginButton{
+                & button{
+                    border-radius: 8px;
+                    padding: 0.4rem 0rem;
+                    font-size: 0.88rem;
+                    letter-spacing: 0.5px;
+                }
+            }
+            &_cartImage{
+                width: 5%;
+            }
+        }
+    }
+    @media only screen and (max-width:770px) {
+        &_content{
+            justify-content: end;
+            &_loginButton{
+                width: 20%;
+                margin-right: 2rem;
+            }
+            &_search{
+                display: none;
+            }
+            &_link{
+                display: none;
+            }
+        }
+    }
+    @media only screen and (max-width:600px) {
+        &_content{
+            justify-content: end;
+            &_loginButton{
+                width: 35%;
+                margin-right: 1rem;
+            }
+            &_cartImage{
+                width: 15%;
+            }
+        }
+    }
+
+}
+
